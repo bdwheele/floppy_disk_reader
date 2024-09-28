@@ -58,6 +58,7 @@ align pin 1 on both devices.  In my case the twist end was near the greaseweazle
 * Fold the two halves of the case together, ensuring the cables do not get into a bind.
 * Insert the rear screws through the case into the floppy drive .
 
+![front view](images/front.png)
 
 # Using the Floppy Disk Reader
 
@@ -162,8 +163,12 @@ the drive from the computer and restart the program
 
 
 ## Credits
+The case was downloaded from https://www.printables.com/model/83539-greaseweazle-v41-v4-f1-plus-mini-case-with-space-f/files
+
+
 The hardware is based on Greaseweazle.  More information can be found at: 
 https://github.com/keirf/greaseweazle
 
 This software uses FluxEngine to talk to the Greaseweazle.  More information can be found
 at: https://github.com/davidgiven/fluxengine
+
