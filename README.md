@@ -55,3 +55,5 @@ align pin 1 on both devices.  In my case the twist end was near the greaseweazle
 
 
 # Software
+
+pyinstaller --add-data fluxengine.fedora40:. --add-data fluxengine.exe:.
