@@ -4,22 +4,34 @@ from PyQt6.QtWidgets import *
 from PyQt6.QtGui import *
 from PyQt6.QtCore import *
 
+import csv
 from pathlib import Path
+import platform
 import re
 import signal
 import sys
-import time
-import csv
+
 
 FLUXENGINE = "./fluxengine.fedora40"
 
 
 def main():
+    global FLUXENGINE
+    # we need to find the fluxengine program.
+    if platform.system() == "Linux":
+        # I'm going to assume to use the included fluexengine.fedora40 binary
+        # since that's where I'm developing.
+        fname = "fluxengine.fedora40"
+    elif platform.system() == "Windows":
+        fname = "fluxengine.exe"
+    FLUXENGINE = str(Path(__file__).resolve().with_name(fname))
+    
+    
     app = QApplication(sys.argv)
     window = MainWindow()    
     window.show()
     signal.signal(signal.SIGINT, lambda signal, handler: app.quit())
-    exit(app.exec())
+    return app.exec()
 
 
 class MainWindow(QWidget):
